@@ -1,9 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f6f2fe;
-  color: #000000;
+  background-color: #ffffff;
 }
 
 /* Top menu */
@@ -11,15 +10,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 100px;
+  padding: 15px 100px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Adicionado para aplicar z-index */
+  z-index: 1100; /* Primeiro plano */
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-left: 50px; /* Espaçamento da borda esquerda */
+  margin-left: 50px;
+  /* Espaçamento da borda esquerda */
 }
 
 .logo img {
@@ -40,11 +42,11 @@ body {
   left: 0;
   height: 100%;
   width: 250px;
-  background-color: #ffffff;
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  background-color: #3d3d85;
+  box-shadow: 2px 0 4px rgba(255, 255, 255, 0.1);
   transform: translateX(-100%);
   transition: transform 0.5s ease;
-  z-index: -1;
+  z-index: 1000; /* Segundo plano */
 }
 
 .vertical-menu.open {
@@ -63,7 +65,7 @@ body {
 
 .vertical-menu ul li a {
   text-decoration: none;
-  color: #333;
+  color: #f6f6f6;
   font-size: 16px;
 }
 
@@ -99,4 +101,67 @@ body {
 
 .hamburger.open div:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+/* From Uiverse.io by SteveBloX */
+.card {
+  box-sizing: border-box;
+  width: 190px;
+  height: 254px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative; /* Adicionado para aplicar z-index */
+  z-index: 900; /* Terceiro plano */
+}
+.card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.welcome {
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #393939;  
 }
