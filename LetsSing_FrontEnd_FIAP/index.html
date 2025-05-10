@@ -15,63 +15,92 @@
 <body>
   <!-- Top Menu -->
   <div class="top-menu">
+    <!-- Botão para abrir e fechar o menu -->
+    <button id="menuButton" class="menu-button" onclick="toggleVerticalMenu()">Expandir Menu</button>
     <div class="logo">
-      <img src="logo.png" alt="LetsSign Logo" />
-      <span>LetsSign</span>
+      <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo_only_logo.png" alt="LetsSign Logo" />
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+    <!-- gráfico de porcentagem -->
+    <div class="referral-container">
+      <button class="referral-button">
+        Indique e Ganhe $
+      </button>
+      <div class="usage-container">
+        <span>Uso:</span>
+        <div class="usage-circle">
+          <span>10%</span>
+        </div>
+      </div>
+    </div>
+    <!-- User Profile -->
+    <div class="user-profile">
+      <button class="btndrop btn-secondary dropdown-toggle" type="button" id="userMenuButton"
+        onclick="toggleDropdown()">
+        Perfil
+      </button>
+      <ul class="dropdown-menu" id="userDropdownMenu">
+        <li><a class="dropdown-item" href="#"><span class="material-icons">card_giftcard</span> Indique e Ganhe</a></li>
+        <li><a class="dropdown-item" href="#"><span class="material-icons">person</span> Ver Perfil</a></li>
+        <li><a class="dropdown-item" href="#"><span class="material-icons">lock</span> Alterar Senha</a></li>
+        <HR>
+        </HR>
+        <li><a class="dropdown-item" href="#"><span class="material-icons">logout</span> Sair</a></li>
+      </ul>
     </div>
   </div>
   <!-- Vertical Menu -->
   <div class="vertical-menu" id="verticalMenu">
     <ul>
-      <li><a href="#"><span class="material-icons">home</span> Início</a></li>
+      <li><a href="index.html"><span class="material-icons">home</span> Início</a></li>
       <li><a href="#"><span class="material-icons">info</span> Sobre</a></li>
       <li><a href="#"><span class="material-icons">build</span> Serviços</a></li>
       <li><a href="#"><span class="material-icons">contact_mail</span> Contato</a></li>
     </ul>
   </div>
-  <!-- Add Google Fonts Material Icons -->
-
   <!-- Card Container -->
   <div class="welcome">
-    <h4>Boa noite, FIAPRM559562!</h4>
+    <h4>Bem-Vindo a melhor plataforma de assinatura eletrônica !</h4>
     <h5>Selecione uma opção abaixo ou utilize o menu lateral para navegar.</h5>
   </div>
   <br>
   <div class="card-container">
+    <a href="enviar_documento.html" style="text-decoration: none; color: inherit;">
     <div class="card">
-      <img src="card1.jpg" alt="Card 1" />
-      <div class="card-body">
-        <h5>Card 1</h5>
-        <p>Descrição do Card 1</p>
+        <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/send_signature.svg" alt="Card 1" />
+        <div class="card-body">
+          <h5>Enviar um documento para assinatura</h5>
+          <p>Selecione um arquivo que deseja enviar para assinar</p>
+        </div>
       </div>
-    </div>
+    </a>
+    <a href="" style="text-decoration: none; color: inherit;">
     <div class="card">
-      <img src="card2.jpg" alt="Card 2" />
-      <div class="card-body">
-        <h5>Card 2</h5>
-        <p>Descrição do Card 2</p>
+        <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/model.svg" alt="Card 2" />
+        <div class="card-body">
+          <h5>Usar um modelo</h5>
+          <p>Selecione o modelo de documento que deseja gerar para assinar</p>
+        </div>
       </div>
-    </div>
+    </a>
+    <a href="#" style="text-decoration: none; color: inherit;">
     <div class="card">
-      <img src="card3.jpg" alt="Card 3" />
-      <div class="card-body">
-        <h5>Card 3</h5>
-        <p>Descrição do Card 3</p>
+        <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/documents_signed.svg" alt="Card 3" />
+        <div class="card-body">
+          <h5>Minhas assinaturas</h5>
+          <p>Documentos aguardando minha assinatura </p>
+        </div>
       </div>
+    </a>
+    <a href="#" style="text-decoration: none; color: inherit;">
+    <div class="card">
+        <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/documents_waiting.svg" alt="Card 4" />
+        <div class="card-body">
+          <h5>Assinatura de terceiros</h5>
+          <p>Documento aguardando a assinatura de terceiros</p>
+        </div>
+      </div>
+    </a>
     </div>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("verticalMenu");
-      menu.classList.toggle("open");
-    }
-  </script>
 </body>
 
 </html>

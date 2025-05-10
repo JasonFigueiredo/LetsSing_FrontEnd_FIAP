@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LetsSign</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <!-- Top Menu -->
+  <div class="top-menu">
+    <!-- Botão para abrir e fechar o menu -->
+    <button id="menuButton" class="menu-button" onclick="toggleVerticalMenu()">Expandir Menu</button>
+    <div class="logo">
+      <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo_only_logo.png" alt="LetsSign Logo" />
+    </div>
+    <!-- gráfico de porcentagem -->
+    <div class="referral-container">
+      <button class="referral-button">
+        Indique e Ganhe $
+      </button>
+      <div class="usage-container">
+        <span>Uso:</span>
+        <div class="usage-circle">
+          <span>10%</span>
+        </div>
+      </div>
+    </div>
+    <!-- User Profile -->
+    <div class="user-profile">
+      <button class="btndrop btn-secondary dropdown-toggle" type="button" id="userMenuButton"
+        onclick="toggleDropdown()">
+        Perfil
+      </button>
+      <ul class="dropdown-menu" id="userDropdownMenu">
+        <li><a class="dropdown-item" href="#"><span class="material-icons">card_giftcard</span> Indique e Ganhe</a></li>
+        <li><a class="dropdown-item" href="#"><span class="material-icons">person</span> Ver Perfil</a></li>
+        <li><a class="dropdown-item" href="#"><span class="material-icons">lock</span> Alterar Senha</a></li>
+        <hr>
+        <li><a class="dropdown-item" href="#"><span class="material-icons">logout</span> Sair</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Vertical Menu -->
+  <div class="vertical-menu" id="verticalMenu">
+    <ul>
+      <li><a href="index.html"><span class="material-icons">home</span> Início</a></li>
+      <li><a href="#"><span class="material-icons">info</span> Sobre</a></li>
+      <li><a href="#"><span class="material-icons">build</span> Serviços</a></li>
+      <li><a href="#"><span class="material-icons">contact_mail</span> Contato</a></li>
+    </ul>
+  </div>
+  <!-- Card Container -->
+  <br>
+  <div class="welcome">
+    <h4>Enviar documento</h4>
+    <h5>Preencha os campos abaixo e faça o upload do arquivo</h5>
+  </div>
+  <br>
+  <div class="container">
+    <form>
+      <div class="mb-1">
+        <label for="documentUpload" class="form-label">Envie o(s) arquivo(s) do documento:*</label>
+        <br>
+        <label for="folderSelection" class="form-label">
+          <span class="material-icons" style="vertical-align: middle; font-size: 24px;">folder</span>
+          Documentos
+        </label>
+        <button type="button" class="btn btn-link">Alterar pasta</button>
+        <br>
+        <br>
+        <input type="file" class="form-control" id="documentUpload" accept=".doc, .docx, .pdf" multiple />
+      </div>
+      <div class="mb-3">
+        <input type="checkbox" id="attachmentCheck" />
+        <label for="attachmentCheck" class="form-label">Documentos serão anexos?</label>
+        <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
+          title="Marque esta opção se os documentos serão anexados.">help_outline</span>
+      </div>
+    </form>
+  </div>
+  <br>
+  <br>
+  <div class="container2">
+    <form id="documentForm">
+      <div class="mb-3">
+        <label for="documentName" class="form-label">Qual será o nome do documento?*</label>
+        <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
+          title="Marque esta opção se os documentos serão anexados.">help_outline</span>
+
+        <input type="text" class="form-control" id="documentName" placeholder="Digite o nome do documento" required />
+      </div>
+      <div class="mb-3">
+        <label for="accessGroups" class="form-label">Quais grupos terão acesso ao documento?*</label>
+        <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
+          title="Os grupos são grupos de usuários que terão acesso ao documento ex: (Marketing, Comercial, Jurídico). Você também pode cadastrar os grupos e dar permissões aos usuários em &quot;Preferências&quot;.">help_outline</span>
+
+        <select class="form-select" id="accessGroups" required>
+          <option value="" disabled selected>Escolha os grupos que terão acesso</option>
+          <option value="grupo1">Marketing</option>
+          <option value="grupo2">Comercial</option>
+          <option value="grupo3">Jurídico</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="categories" class="form-label">Quais são as categorias desse documento?*</label>
+        <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
+          title="As categorias, tem como objetivo categorizar o documento ex: (Contrato, Proposta, Termo de responsabilidade..). Após a categorização é possível buscar o documento de forma mais fácil filtrando pelas categorias.">help_outline</span>
+
+        <select class="form-select" id="categories" required>
+          <option value="" disabled selected>Selecione as categorias</option>
+          <option value="categoria1">Contrato</option>
+          <option value="categoria2">Proposta</option>
+          <option value="categoria3">Termo de responsabilidade</option>
+        </select>
+      </div>
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-outline-secondary" id="cancelButton">Cancelar</button>
+        <button type="submit" class="btn btn-success" id="saveButton" onclick="handleFormSubmit(event)">Salvar</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
