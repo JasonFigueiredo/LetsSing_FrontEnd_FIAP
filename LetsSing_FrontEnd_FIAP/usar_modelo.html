@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LetsSign</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <!-- Top Menu -->
+  <div class="top-menu">
+    <!-- Botão para abrir e fechar o menu -->
+    <button id="menuButton" class="menu-button" onclick="toggleVerticalMenu()">Expandir Menu</button>
+    <div class="logo">
+      <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo_only_logo.png" alt="LetsSign Logo" />
+    </div>
+    <!-- gráfico de porcentagem -->
+    <div class="referral-container">
+      <button class="referral-button">
+        Indique e Ganhe $
+      </button>
+      <div class="usage-container">
+        <span>Uso:</span>
+        <div class="usage-circle">
+          <span>10%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Vertical Menu -->
+  <div class="vertical-menu" id="verticalMenu">
+    <ul>
+      <li><a href="index.html"><span class="material-icons">home</span> Início</a></li>
+      <li><a href="#"><span class="material-icons">info</span> Sobre</a></li>
+      <li><a href="#"><span class="material-icons">build</span> Serviços</a></li>
+      <li><a href="#"><span class="material-icons">contact_mail</span> Contato</a></li>
+    </ul>
+  </div>
+  <!-- Card Container -->
+  <br>
+  <div class="welcome">
+    <h4>Modelos / Formulários</h4>
+    <h5>Preencha os campos abaixo e faça o upload do arquivo</h5>
+  </div>
+  <br>
+  <div class="dropdown-modelo">
+    <button class="dropdown-button" onclick="toggleDropdown()">Como funcionam os modelos? <span
+        class="material-icons">add</span></button>
+  </div>
+  <div class="dropdown-content" id="dropdownContent" style="display: none;">
+    <p>A LetsSign tornou fácil criar modelos de documentos e gerar formulários para preenchimento. Crie seu modelo e
+      compartilhe o formulário para que você ou outras pessoas preencham, populando diretamente o documento. É rápido,
+      seguro e eficiente!</p>
+    <p>Veja abaixo mais detalhes em vídeos:</p>
+    <h6>1 - Introdução ao modelo de documentos</h6>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/u7ToYxXFO2w" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <br>
+    <br>
+    <h6>2 - Criando e configurando um modelo</h6>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/UefAF08VJao" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    <br>
+    <br>
+    <h6>3 - Enviando o documento para ser preenchido através de um formulário personalizado</h6>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/DeTcRejkmQo" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  </div>
+  <br>
+  <div class="text-center">
+    <button class="btn-modelo">Novo Modelo</button>
+  </div>
+  <br>
+  <div class="input-container_modelo">
+    <input type="text" class="input-field " placeholder="Pesquisa por nome " />
+  </div>
+  <br>
+  <div class="table-container">
+    <h4>Modelos</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Documento</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Contrato de Prestação de Serviços</td>
+          <td>
+            <a href="#" onclick="copiarConteudo('Contrato de Prestação de Serviços')">Copiar Conteúdo</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Termo de Confidencialidade</td>
+          <td>
+            <a href="#" onclick="copiarConteudo('Termo de Confidencialidade')">Copiar Conteúdo</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+</body>
+
+</html>

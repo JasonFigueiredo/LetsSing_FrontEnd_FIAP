@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>LetsSign</title>
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+ <link rel="stylesheet" href="styles.css" />
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <script src="scripts.js"></script>
+</head>
+
+<body>
+ <!-- Top Menu -->
+ <div class="top-menu">
+  <!-- Botão para abrir e fechar o menu -->
+  <button id="menuButton" class="menu-button" onclick="toggleVerticalMenu()">Expandir Menu</button>
+  <div class="logo">
+   <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo_only_logo.png" alt="LetsSign Logo" />
+  </div>
+  <!-- gráfico de porcentagem -->
+  <div class="referral-container">
+   <button class="referral-button">
+    Indique e Ganhe $
+   </button>
+   <div class="usage-container">
+    <span>Uso:</span>
+    <div class="usage-circle">
+     <span>10%</span>
+    </div>
+   </div>
+  </div>
+
+ </div>
+ <!-- Vertical Menu -->
+ <div class="vertical-menu" id="verticalMenu">
+  <ul>
+   <li><a href="index.html"><span class="material-icons">home</span> Início</a></li>
+   <li><a href="#"><span class="material-icons">info</span> Sobre</a></li>
+   <li><a href="#"><span class="material-icons">build</span> Serviços</a></li>
+   <li><a href="#"><span class="material-icons">contact_mail</span> Contato</a></li>
+  </ul>
+ </div>
+ <!-- Card Container -->
+ <br>
+ <div class="welcome">
+  <h4>Documentos aguardando assinatura de terceiros</h4>
+  <h6>Listagem de documentos aguardando assinatura de terceiros</h6>
+ </div>
+ <br>
+ <br>
+ <div class="button-container4">
+  <button class="btn btn-outline-info2">Usar modelo</button>
+  <button class="btn btn-outline-info2">Enviar documentos</button>
+ </div>
+ <br>
+ <div class="dropdown-modelo">
+  <button class="dropdown-button" onclick="toggleDropdown()">Selecionar filtros <span class="material-icons"
+    onclick="applyFilter(this)">filter_alt</span>
+   <span class="material-icons" onclick="refreshFilters(this)">refresh</span>
+   <span class="material-icons" onclick="applyListFilter(this)">filter_list</span>
+   <span class="material-icons" onclick="sortAlphabetically(this)">sort_by_alpha</span></button>
+ </div>
+ <div class="dropdown-content" id="dropdownContent" style="display: none;">
+  <p>Nome:</p>
+  <div class="input-container">
+   <input type="text" class="input-field" placeholder="Pesquisa por nome " />
+  </div>
+  <p>Contatos:</p>
+  <div class="input-container">
+   <select class="input-field">
+    <option value="" disabled selected>Selecione um contato</option>
+    <option value="contato1">João Silva</option>
+    <option value="contato2">Maria Oliveira</option>
+    <option value="contato3">Carlos Santos</option>
+    <option value="contato4">Ana Costa</option>
+   </select>
+  </div>
+  <p>Categorias:</p>
+  <div class="input-container">
+   <select class="input-field">
+    <option value="" disabled selected>Selecione uma categoria</option>
+    <option value="categoria1">Tecnologia</option>
+    <option value="categoria2">Educação</option>
+    <option value="categoria3">Saúde</option>
+    <option value="categoria4">Finanças</option>
+    <option value="categoria5">Entretenimento</option>
+   </select>
+  </div>
+  <p>Criado em:</p>
+  <div class="input-container">
+   <input type="date" class="input-field" />
+  </div>
+  <p>Criato até:</p>
+  <div class="input-container">
+   <input type="date" class="input-field" />
+  </div>
+  <p>Criado por:</p>
+  <div class="input-container">
+   <select class="input-field">
+    <option value="" disabled selected>Selecione um usuário</option>
+    <option value="usuario1">João Silva</option>
+    <option value="usuario2">Maria Oliveira</option>
+    <option value="usuario3">Carlos Santos</option>
+    <option value="usuario4">Ana Costa</option>
+   </select>
+  </div>
+  <p>Arquivados:</p>
+  <div class="input-container">
+   <select class="input-field">
+    <option value="" disabled selected>Selecione uma opção</option>
+    <option value="sim">Sim</option>
+    <option value="nao">Não</option>
+   </select>
+  </div>
+  <p>Grupos:</p>
+  <div class="input-container">
+   <select class="input-field">
+    <option value="" disabled selected>Selecione um grupo</option>
+    <option value="grupo1">Marketing</option>
+    <option value="grupo2">Vendas</option>
+    <option value="grupo3">Desenvolvimento</option>
+   </select>
+  </div>
+  <p>Email Signatario:</p>
+  <div class="input-container">
+   <input type="email" class="input-field" placeholder="Pesquisa por email " />
+  </div>
+  <div class="button-container1"></div>
+  <button class="btn btn-outline-secondary1" onclick="clearFields()">Limpar Campos</button>
+  <button class="btn btn-outline-primary1" onclick="startSearch()">Iniciar Pesquisa</button>
+ </div>
+ </div>
+ </div>
+ <br>
+ <br>
+ <div class="text-center">
+  <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/empty-folder.svg" alt="Sample Image" class="img-fluid"
+   style="width: 10%;" />
+  <br>
+  <br>
+  <h4>Nenhum registro encontrado com o filtro informado.</h4>
+  Mude os critérios da busca para encontrar o que deseja.
+ </div>
+
+ <br>

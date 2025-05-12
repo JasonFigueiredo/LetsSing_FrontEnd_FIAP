@@ -1,17 +1,3 @@
-function toggleDropdown() {
- const dropdownMenu = document.getElementById("userDropdownMenu");
- dropdownMenu.classList.toggle("show");
-}
-
-// Close dropdown if clicked outside
-window.addEventListener("click", function (e) {
- const button = document.getElementById("userMenuButton");
- const dropdownMenu = document.getElementById("userDropdownMenu");
- if (!button.contains(e.target) && !dropdownMenu.contains(e.target)) {
-  dropdownMenu.classList.remove("show");
- }
-});
-
 function toggleVerticalMenu() {
  const verticalMenu = document.getElementById('verticalMenu');
  const menuButton = document.getElementById('menuButton');
@@ -50,3 +36,60 @@ function handleFormSubmit(event) {
  }
 }
 
+function toggleDropdown() {
+ const content = document.getElementById('dropdownContent');
+ const isHidden = content.style.display === 'none';
+ content.style.display = isHidden ? 'block' : 'none';
+}
+
+function copiarConteudo(conteudo) {
+ navigator.clipboard.writeText(conteudo).then(() => {
+  alert('Conteúdo copiado: ' + conteudo);
+ }).catch(err => {
+  alert('Erro ao  copiar conteúdo: ' + err);
+ });
+}
+
+document.getElementById('dropdownButton').addEventListener('click', function () {
+ const dropdownMenu = document.querySelector('.dropdown-menu');
+ const isHidden = dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '';
+ dropdownMenu.style.display = isHidden ? 'block' : 'none';
+});
+
+document.addEventListener('click', function (event) {
+ const dropdownMenu = document.querySelector('.dropdown-menu');
+ const dropdownButton = document.getElementById('dropdownButton');
+ if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+  dropdownMenu.style.display = 'none';
+ }
+});
+
+function clearFields() {
+ document.querySelectorAll('.input-field').forEach(field => {
+  if (field.tagName === 'INPUT') {
+   field.value = '';
+  } else if (field.tagName === 'SELECT') {
+   field.selectedIndex = 0;
+  }
+ });
+}
+
+function startSearch() {
+ alert('Iniciando pesquisa com os critérios informados.');
+}
+
+function applyFilter(element) {
+ alert('Filtro aplicado!');
+}
+
+function refreshFilters(element) {
+ alert('Filtros redefinidos!');
+}
+
+function applyListFilter(element) {
+ alert('Filtro de lista aplicado!');
+}
+
+function sortAlphabetically(element) {
+ alert('Lista ordenada alfabeticamente!');
+}
