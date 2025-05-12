@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LetsSign</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <!-- Top Menu -->
+  <div class="top-menu">
+    <!-- Botão para abrir e fechar o menu -->
+    <button id="menuButton" class="menu-button" onclick="toggleVerticalMenu()">Expandir Menu</button>
+    <div class="logo">
+      <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo_only_logo.png" alt="LetsSign Logo" />
+    </div>
+    <!-- gráfico de porcentagem -->
+    <div class="referral-container">
+      <button class="referral-button">
+        Indique e Ganhe $
+      </button>
+      <div class="usage-container">
+        <span>Uso:</span>
+        <div class="usage-circle">
+          <span>10%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Vertical Menu -->
+  <div class="vertical-menu" id="verticalMenu">
+    <ul>
+      <li><a href="index.html"><span class="material-icons">home</span> Início</a></li>
+      <li><a href="#"><span class="material-icons">info</span> Sobre</a></li>
+      <li><a href="#"><span class="material-icons">build</span> Serviços</a></li>
+      <li><a href="#"><span class="material-icons">contact_mail</span> Contato</a></li>
+    </ul>
+  </div>
+  <!-- Card Container -->
+  <br>
+  <div class="welcome">
+    <h4>Documentos</h4>
+    <h6>Bem-vindo a assinatura eletrônica de documentos do LetsSign</h6>
+    <h6>Os próximos passos servirão de guia durante o processo de assinatura</h6>
+  </div>
+  <br>
+  <br>
+  <div class="progress3" style="height: 25px;"></div>
+  <div class="progress-bar3" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+    aria-valuemax="100">
+  </div>
+  </div>
+  <br>
+  <div class="input-container_modelo">
+    <h3>Gerar carimbo de tempo (Serpro):</h3>
+    <p>Para gerar o carimbo de tempo pela Serpro basta apenas clicar no link <a href="#"
+        style="color: blue; text-decoration: underline;">assinar arquivo</a> e automaticamente iremos gerar e importar o
+      carimbo da assinatura para o seu documento:</p>
+  </div>
+  <div class="imagem container">
+    <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/certificacao-digital-serpro-01-resize.svg" class="img-fluid"
+      style="max-width: 20%;">
+    <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo-assinador-serpro.png" class="img-fluid"
+      style="max-width: 20%;">
+
+    <button class="btn btn-primary" id="startSignatureButton" onclick="startSignatureProcess()">Iniciar Assinatura</button>
+
+    <div id="loadingAnimation" class="loading-container" style="display: none;">
+      <div class="spinner"></div>
+      <p>Carregando a sua assinatura eletrônica...</p>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button type="button" class="btn btn-outline-secondary" id="cancelButton"
+        onclick="window.location.href='dados_assinatura.html'">Voltar</button>
+      <button type="submit" class="btn btn-success" id="saveButton" onclick="validateForm(event)">Avançar</button>
+    </div>
+  </div>
+
+
+  <footer class="text-center mt-5">
+    <p><em>Ao assinar o documento você está de acordo com os <a href="#">Termos de Uso do LetsSign.</em></a></p>
+  </footer>
+  <br>
+  <br>
+</body>
+
+</html>

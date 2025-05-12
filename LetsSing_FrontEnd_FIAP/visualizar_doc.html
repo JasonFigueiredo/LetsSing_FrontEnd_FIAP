@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LetsSign</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <!-- Top Menu -->
+  <div class="top-menu">
+    <!-- Botão para abrir e fechar o menu -->
+    <button id="menuButton" class="menu-button" onclick="toggleVerticalMenu()">Expandir Menu</button>
+    <div class="logo">
+      <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo_only_logo.png" alt="LetsSign Logo" />
+    </div>
+    <!-- gráfico de porcentagem -->
+    <div class="referral-container">
+      <button class="referral-button">
+        Indique e Ganhe $
+      </button>
+      <div class="usage-container">
+        <span>Uso:</span>
+        <div class="usage-circle">
+          <span>10%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Vertical Menu -->
+  <div class="vertical-menu" id="verticalMenu">
+    <ul>
+      <li><a href="index.html"><span class="material-icons">home</span> Início</a></li>
+      <li><a href="#"><span class="material-icons">info</span> Sobre</a></li>
+      <li><a href="#"><span class="material-icons">build</span> Serviços</a></li>
+      <li><a href="#"><span class="material-icons">contact_mail</span> Contato</a></li>
+    </ul>
+  </div>
+  <!-- Card Container -->
+  <br>
+  <div class="welcome">
+    <h4>Revisar Documento</h4>
+    <h5>Verifique se todos os dados estão corretos</h5>
+  </div>
+  <br>
+  <div class="dropdown-modelo">
+    <button class="dropdown-button" onclick="toggleDropdown()">Visualização do Documento / Revisar Informações <span
+        class="material-icons">add</span></button>
+  </div>
+  <div class="dropdown-content1" id="dropdownContent" style="display: none;">
+    <h5>CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE DESENVOLVIMENTO WEB</h5>
+    <p>CONTRATANTE:</p>
+    <p>Nome: Fernando da Silva dos Santos</p>
+    <p>CNPJ/CPF: 678.567.567-56</p>
+    <p>Endereço: Rua 15 LT 34º Qd 54 º parque dos buritis - SP</p>
+    <br>
+    <p>CONTRATADA:</p>
+    <p>Nome: Web Designer</p>
+    <p>CNPJ/CPF: 234/0001-34</p>
+    <p>Endereço: Avenida Caxias do Sul - SC</p>
+    <br>
+    <p>As partes acima identificadas têm entre si justo e acordado o presente Contrato de Prestação de Serviços de
+      Desenvolvimento Web, conforme as seguintes cláusulas e condições:</p>
+    <hr>
+    <p>CLÁUSULA PRIMEIRA - DO OBJETO</p>
+    <br>
+    <p>O presente contrato tem como objeto o desenvolvimento de um protótipo de site para assinaturas digitais,
+      incluindo:</p>
+    <br>
+    <p>1. Implementação de uma funcionalidade de assinatura digital profissional.</p>
+    <p>2. Validação biométrica facial para autenticação do usuário.</p>
+    <p>3. Integração com sistema de validação cronológica dos documentos assinados.</p>
+    <p>4. Funcionalidade para comprovação legal junto ao Tabelionato de Notas, garantindo autenticidade e validade
+      jurídica dos documentos.</p>
+    <hr>
+    <p>CLÁUSULA SEGUNDA - DAS OBRIGAÇÕES DA CONTRATADA</p>
+    <br>
+    <p>A Contratada compromete-se a:</p>
+    <br>
+    <p>1. Desenvolver e entregar o protótipo dentro do prazo estipulado neste contrato.</p>
+    <p>2. Garantir a implementação das funcionalidades descritas na Cláusula Primeira, assegurando sua viabilidade
+      técnica.</p>
+    <p>3. Realizar testes de usabilidade, segurança e validação das funcionalidades desenvolvidas.</p>
+    <p>4. Fornecer suporte técnico durante o período de validação do protótipo.</p>
+    <hr>
+    <p>CLÁUSULA TERCEIRA - DAS OBRIGAÇÕES DA CONTRATANTE</p>
+    <br>
+    <p>A Contratante compromete-se a:</p>
+    <br>
+    <p>1. Fornecer todas as informações necessárias para o desenvolvimento do projeto, como requisitos técnicos e
+      funcionais.</p>
+    <p>2. Efetuar o pagamento dos valores acordados, conforme os prazos estabelecidos neste contrato.</p>
+    <p>3. Garantir acesso à infraestrutura necessária para o desenvolvimento e testes do sistema.</p>
+    <hr>
+    <p>CLÁUSULA QUARTA - DO PRAZO DE EXECUÇÃO</p>
+    <br>
+    <p>O prazo para desenvolvimento e entrega do protótipo será de 90 dias úteis, contados a partir da assinatura deste
+      contrato e recebimento das informações iniciais.</p>
+    <hr>
+    <p>CLÁUSULA QUINTA - DO VALOR E FORMA DE PAGAMENTO</p>
+    <br>
+    <p>1. O valor total do serviço é de R$ 10.456,55.</p>
+    <p>2. O pagamento será efetuado da seguinte forma: Boleto eletrônico.</p>
+    <hr>
+    <p>CLÁUSULA SEXTA - DA COMPROVAÇÃO JURÍDICA</p>
+    <br>
+    <p>1. A funcionalidade de validação biométrica facial e assinatura digital será integrada com sistemas que permitam
+      a autenticação de documentos junto a Tabelionatos de Notas.</p>
+    <p>2. A validação cronológica será realizada por meio de Autoridade de Carimbo do Tempo (TSA - Time Stamping
+      Authority).</p>
+    <hr>
+    <p>CLÁUSULA SÉTIMA - DA PROPRIEDADE INTELECTUAL</p>
+    <br>
+    <p>Os direitos sobre o código-fonte e demais materiais desenvolvidos serão transferidos à Contratante após a
+      conclusão do projeto e quitação total dos valores devidos.</p>
+    <hr>
+    <p>CLÁUSULA OITAVA - DA RESCISÃO</p>
+    <br>
+    <p>O contrato poderá ser rescindido por qualquer das partes mediante aviso prévio de 10 dias, sendo devida a
+      compensação financeira proporcional ao trabalho já realizado.</p>
+    <hr>
+    <p>CLÁUSULA NONA - DO FORO</p>
+    <br>
+    <p>Fica eleito o foro da Comarca de [Cidade/Estado], para dirimir quaisquer dúvidas ou controvérsias oriundas deste
+      contrato, com renúncia de qualquer outro, por mais privilegiado que seja.</p>
+    <br>
+    <p>E por estarem de acordo, as partes assinam o presente contrato em quatro vias de igual teor e forma, para que
+      produza seus efeitos legais.</p>
+    <hr>
+    <h5>Assinatura Contratante</h5>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h5>Autoridade de Carimbo do Tempo (TSA - Time Stamping Authority)</h5>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+      <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/image.png" alt="Assinatura TSA"
+        style="width: 200px; height: auto;">
+    </div>
+    <hr>
+    <h5>Assinatura Contratada</h5>
+    <h5>Web Designer CNPJ/CPF: 234/0001-34</h5>
+  </div>
+  </div>
+  <br>
+  <div class="button-container1">
+    <a href="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/contrato_sem_assinatura.docx" download>
+      <button class="btn btn-outline-info2">Baixar Documento</button>
+    </a>
+    <button class="btn btn-outline-success3" onclick="window.location.href='dados_assinatura.html'">Assinar como Contratante</button>
+  </div>
+</body>
+
+</html>

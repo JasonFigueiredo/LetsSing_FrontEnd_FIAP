@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    
+
   </div>
   <!-- Vertical Menu -->
   <div class="vertical-menu" id="verticalMenu">
@@ -77,17 +77,24 @@
   <div class="container2">
     <form id="documentForm">
       <div class="mb-3">
+        <label for="accessGroups" class="form-label">Qual será o metodo de assinatura/validação do documento ?</label>
+        <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
+          title="O método TSA (Time Stamping Authority) é utilizado para autenticar a assinatura com um carimbo de tempo confiável, garantindo a integridade e validade do documento.">help_outline</span>
+        <select class="form-select" id="accessGroups" required>
+          <option value="" disabled selected>Escolha o metodo de assinatura</option>
+          <option value="grupo1">TSA (Time Stamping Authority)</option>
+        </select>
+      </div>
+      <div class="mb-3">
         <label for="documentName" class="form-label">Qual será o nome do documento?*</label>
         <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
           title="Marque esta opção se os documentos serão anexados.">help_outline</span>
-
         <input type="text" class="form-control" id="documentName" placeholder="Digite o nome do documento" required />
       </div>
       <div class="mb-3">
         <label for="accessGroups" class="form-label">Quais grupos terão acesso ao documento?*</label>
         <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
-          title="Os grupos são grupos de usuários que terão acesso ao documento ex: (Marketing, Comercial, Jurídico). Você também pode cadastrar os grupos e dar permissões aos usuários em &quot;Preferências&quot;.">help_outline</span>
-
+          title="Os grupos são grupos de usuários que terão acesso ao documento ex: (Marketing, Comercial, Jurídico). Você também pode cadastrar os grupos e dar permissões aos usuários.">help_outline</span>
         <select class="form-select" id="accessGroups" required>
           <option value="" disabled selected>Escolha os grupos que terão acesso</option>
           <option value="grupo1">Marketing</option>
@@ -99,7 +106,6 @@
         <label for="categories" class="form-label">Quais são as categorias desse documento?*</label>
         <span class="material-icons" style="vertical-align: middle; font-size: 20px;"
           title="As categorias, tem como objetivo categorizar o documento ex: (Contrato, Proposta, Termo de responsabilidade..). Após a categorização é possível buscar o documento de forma mais fácil filtrando pelas categorias.">help_outline</span>
-
         <select class="form-select" id="categories" required>
           <option value="" disabled selected>Selecione as categorias</option>
           <option value="categoria1">Contrato</option>

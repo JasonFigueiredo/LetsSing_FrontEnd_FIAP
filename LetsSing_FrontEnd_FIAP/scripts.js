@@ -26,14 +26,29 @@ document.getElementById('cancelButton').addEventListener('click', function () {
  }
 });
 
-function handleFormSubmit(event) {
+function submitdados(event) {
  const form = document.getElementById('documentForm');
  if (form.checkValidity()) {
   event.preventDefault();
-  window.location.href = 'index.html';
+  window.location.href = 'ass_manual.html';
  } else {
   alert('Por favor, preencha todos os campos obrigatórios.');
  }
+}
+
+function validateForm(event) {
+ event.preventDefault();
+ const nomeCompleto = document.getElementById('nomeCompleto').value.trim();
+ const cpf = document.getElementById('cpf').value.trim();
+ const dataNascimento = document.getElementById('dataNascimento').value.trim();
+
+ if (!nomeCompleto || !cpf || !dataNascimento) {
+  alert('Por favor, preencha todos os campos obrigatórios.');
+  return;
+ }
+
+ // Se todos os campos estiverem preenchidos, avançar para a próxima página
+ window.location.href = 'ass_manual.html';
 }
 
 function toggleDropdown() {
@@ -92,4 +107,51 @@ function applyListFilter(element) {
 
 function sortAlphabetically(element) {
  alert('Lista ordenada alfabeticamente!');
+}
+
+function applyCpfMask(input) {
+ let value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
+ value = value.replace(/(\d{3})(\d)/, "$1.$2"); // Add first dot
+ value = value.replace(/(\d{3})(\d)/, "$1.$2"); // Add second dot
+ value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Add dash
+ input.value = value;
+}
+
+// assinatura
+function validateForm(event) {
+ const nameInput = document.getElementById('nameInput').value.trim();
+ const canvas = document.getElementById('signatureCanvas');
+
+ if (!nameInput) {
+  event.preventDefault();
+  alert('Por favor, preencha todos os campos obrigatórios e assine no campo indicado.');
+  return false;
+ }
+
+ alert('Formulário assinado com sucesso!');
+ window.location.href = 'ass_serpro.html'; // Avança para a próxima página
+ return true;
+}
+
+function startSignatureProcess() {
+ const button = document.getElementById('startSignatureButton');
+ const loadingAnimation = document.getElementById('loadingAnimation');
+
+ // Desativa o botão para evitar múltiplos cliques
+ button.disabled = true;
+
+ // Exibe a animação de carregamento
+ loadingAnimation.style.display = 'flex';
+
+ // Simula o carregamento de 5 segundos
+ setTimeout(() => {
+  // Oculta a animação de carregamento
+  loadingAnimation.style.display = 'none';
+
+  // Reativa o botão
+  button.disabled = false;
+
+  // Exibe uma mensagem de sucesso
+  alert('Processo de assinatura finalizado! Por favor, clique em avançar para continuar.');
+ }, 5000); // 5 segundos
 }
