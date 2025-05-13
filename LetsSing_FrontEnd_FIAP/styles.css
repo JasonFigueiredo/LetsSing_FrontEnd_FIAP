@@ -931,7 +931,7 @@ body {
 
 .progress {
   width: 90%;
-  margin: -24px auto;
+  margin: 24px auto;
   background-color: #e6e6fa;
   border-radius: 30px;
   overflow: hidden;
@@ -940,7 +940,6 @@ body {
 
 .progress-bar {
   height: 25px;
-  margin-left: 45px;
   background-color: #20bd0b;
   color: white;
   text-align: center;
@@ -967,7 +966,7 @@ body {
 
 .progress2 {
   width: 90%;
-  margin: -24px auto;
+  margin: 24px auto;
   background-color: #e6e6fa;
   border-radius: 30px;
   overflow: hidden;
@@ -976,7 +975,6 @@ body {
 
 .progress-bar2 {
   height: 25px;
-  margin-left: 45px;
   background-color: #20bd0b;
   color: white;
   text-align: center;
@@ -1002,7 +1000,7 @@ body {
 }
 .progress3 {
   width: 90%;
-  margin: -24px auto;
+  margin: 24px auto;
   background-color: #e6e6fa;
   border-radius: 30px;
   overflow: hidden;
@@ -1011,7 +1009,6 @@ body {
 
 .progress-bar3 {
   height: 25px;
-  margin-left: 45px;
   background-color: #20bd0b;
   color: white;
   text-align: center;
@@ -1033,6 +1030,41 @@ body {
   to {
     width: 75%;
     /* End at 75% */
+  }
+}
+
+.progress4 {
+  width: 90%;
+  margin: 24px auto;
+  background-color: #e6e6fa;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar4 {
+  height: 25px;
+  background-color: #20bd0b;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+  transition: width 0.3s ease;
+  border-radius: 30px 0 0 30px;
+  width: 0;
+  /* Start at 0% */
+  animation: progressAnimation4 2s forwards;
+  /* Add animation */
+}
+
+@keyframes progressAnimation4 {
+  from {
+    width: 75%;
+  }
+
+  to {
+    width: 100%;
+    /* End at 100% */
   }
 }
 

@@ -182,3 +182,22 @@ function validateAge() {
   error.style.display = 'none';
  }
 }
+
+function toggleSaveButton() {
+ const checkbox = document.getElementById('termsCheckbox');
+ const saveButton = document.getElementById('saveButton');
+ saveButton.disabled = !checkbox.checked;
+}
+
+// Initially disable the save button
+document.getElementById('saveButton').disabled = true;
+
+
+function proceedToNextPage() {
+ const checkbox = document.getElementById('termsCheckbox');
+ if (checkbox.checked) {
+ window.location.href = 'final_ass_serpro.html';
+ } else {
+ alert('Por favor, aceite os termos para continuar.');
+ }
+}

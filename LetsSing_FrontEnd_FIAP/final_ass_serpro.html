@@ -46,18 +46,15 @@
   <!-- Card Container -->
   <br>
   <div class="welcome">
-    <h4>Contrato [Via LetsSing 02/05/2024]</h4>
+    <h4>Contrato [Via LetsSing 02/05/2024] - Web desginer</h4>
     <h6>Bem-vindo a assinatura eletrônica de documentos do LetsSign</h6>
     <h6>Os próximos passos servirão de guia durante o processo de assinatura</h6>
   </div>
-  <br>
-  <br>
-  <div class="progress3" style="height: 25px;"></div>
-  <div class="progress-bar3" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
-    aria-valuemax="100">
+  <div class="progress4" style="height: 25px;">
+    <div class="progress-bar4" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+      aria-valuemax="100">
+    </div>
   </div>
-  </div>
-  <br>
   <div class="input-container_modelo">
     <h3>Gerar carimbo de tempo (Serpro):</h3>
     <p>Para gerar o carimbo de tempo pela Serpro basta apenas clicar no link <a href="#"
@@ -70,7 +67,8 @@
     <img src="/LetsSing_FrontEnd_FIAP/bootstrap_docs/img/logo-assinador-serpro.png" class="img-fluid"
       style="max-width: 20%;">
 
-    <button class="btn btn-primary" id="startSignatureButton" onclick="startSignatureProcess()">Iniciar Assinatura</button>
+    <button class="btn btn-primary" id="startSignatureButton" onclick="startSignatureProcess()">Iniciar
+      Assinatura</button>
 
     <div id="loadingAnimation" class="loading-container" style="display: none;">
       <div class="spinner"></div>
@@ -79,12 +77,10 @@
 
     <div class="d-flex justify-content-between">
       <button type="button" class="btn btn-outline-secondary" id="cancelButton"
-        onclick="window.location.href='ass_manual.html'">Voltar</button>
+        onclick="window.location.href='ass_serpro.html'">Voltar</button>
       <button type="submit" class="btn btn-success" id="saveButton" onclick="validateForm(event)">Avançar</button>
     </div>
   </div>
-
-
   <footer class="text-center mt-5">
     <p><em>Ao assinar o documento você está de acordo com os <a href="#">Termos de Uso do LetsSign.</em></a></p>
   </footer>

@@ -50,36 +50,38 @@
     <h6>Bem-vindo a assinatura eletrônica de documentos do LetsSign</h6>
     <h6>Os próximos passos servirão de guia durante o processo de assinatura</h6>
   </div>
-  <br>
-  <br>
-  <div class="progress" style="height: 25px;"></div>
-  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
-    aria-valuemax="100">
+  <div class="progress" style="height: 25px;">
+    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+      aria-valuemax="100">
+    </div>
   </div>
-  </div>
-  <br>
   <div class="input-container_modelo">
-    <p>Preencha suas informações nos campos abaixo</p>
+    <p>Preencha suas informações nos campos abaixo:</p>
   </div>
   <form id="documentForm" onsubmit="submitdados(event)">
     <div class="input-container_modelo">
       <p>1 - Qual o seu nome completo?*</p>
-      <input type="text" id="nomeCompleto" class="input-field" placeholder="Digite seu nome completo" required maxlength="50" />
+      <input type="text" id="nomeCompleto" class="input-field" placeholder="Digite seu nome completo" required
+        maxlength="50" />
     </div>
     <div class="input-container_modelo">
       <p>2 - Qual o seu CPF?*</p>
-      <input type="text" id="cpf" class="input-field" placeholder="Digite seu CPF" required oninput="applyCpfMask(this)" maxlength="14" />
+      <input type="text" id="cpf" class="input-field" placeholder="Digite seu CPF" required oninput="applyCpfMask(this)"
+        maxlength="14" />
     </div>
     <div class="input-container_modelo">
       <p>3 - Qual a sua data de nascimento?*</p>
-      <input type="date" id="dataNascimento" class="input-field" placeholder="Digite sua data de nascimento" required onchange="validateAge()" />
+      <input type="date" id="dataNascimento" class="input-field" placeholder="Digite sua data de nascimento" required
+        onchange="validateAge()" />
       <small id="ageError" style="color: red; display: none;">Você deve ter pelo menos 18 anos.</small>
     </div>
     <div class="input-container_modelo">
-      <p>*Algumas informações foram preenchidas pelo requisitante, Confira os dados e altere caso alguma informação esteja
+      <p>*Algumas informações foram preenchidas pelo requisitante, Confira os dados e altere caso alguma informação
+        esteja
         incorreta.</p>
       <div class="d-flex justify-content-between">
-        <button type="button" class="btn btn-outline-secondary" id="cancelButton" onclick="window.location.href='visualizar_doc.html'">Voltar</button>
+        <button type="button" class="btn btn-outline-secondary" id="cancelButton"
+          onclick="window.location.href='visualizar_doc.html'">Voltar</button>
         <button type="submit" class="btn btn-success" id="saveButton" onclick="validateForm(event)">Salvar</button>
       </div>
     </div>
