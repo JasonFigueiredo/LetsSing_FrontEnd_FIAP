@@ -155,3 +155,30 @@ function startSignatureProcess() {
   alert('Processo de assinatura finalizado! Por favor, clique em avançar para continuar.');
  }, 5000); // 5 segundos
 }
+
+function handleFormSubmit(event) {
+ event.preventDefault();
+ const form = document.getElementById('documentForm');
+ if (form.checkValidity()) {
+  window.location.href = 'visualizar_doc.html';
+ } else {
+  form.reportValidity();
+ }
+}
+
+function validateAge() {
+ const input = document.getElementById('dataNascimento');
+ const error = document.getElementById('ageError');
+ const birthDate = new Date(input.value);
+ const today = new Date();
+ const age = today.getFullYear() - birthDate.getFullYear();
+ const monthDiff = today.getMonth() - birthDate.getMonth();
+ const dayDiff = today.getDate() - birthDate.getDate();
+
+ if (age < 18 || (age === 18 && (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)))) {
+  error.style.display = 'block';
+  input.value = '';
+ } else {
+  error.style.display = 'none';
+ }
+}

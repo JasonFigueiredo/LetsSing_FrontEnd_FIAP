@@ -72,7 +72,8 @@
     </div>
     <div class="input-container_modelo">
       <p>3 - Qual a sua data de nascimento?*</p>
-      <input type="date" id="dataNascimento" class="input-field" placeholder="Digite sua data de nascimento" required />
+      <input type="date" id="dataNascimento" class="input-field" placeholder="Digite sua data de nascimento" required onchange="validateAge()" />
+      <small id="ageError" style="color: red; display: none;">Você deve ter pelo menos 18 anos.</small>
     </div>
     <div class="input-container_modelo">
       <p>*Algumas informações foram preenchidas pelo requisitante, Confira os dados e altere caso alguma informação esteja
